@@ -17,6 +17,12 @@ with Homebrew keg-only dependencies.
 Some good pkg-config and CFLAGS info here
 https://github.com/Homebrew/legacy-homebrew/blob/683b9b63a2c09dcc49f2de0742c9c904b7ccbc8d/share/doc/homebrew/How-to-build-software-outside-Homebrew-with-Homebrew-keg-only-dependencies.md
 
+How to use pkg-config in Make
+Has:
+  CFLAGS=-g -Wall -Wextra $(shell pkg-config --cflags gtk+-3.0)
+  LDFLAGS=$(shell pkg-config --libs gtk+-3.0)
+https://stackoverflow.com/questions/28533059/how-to-use-pkg-config-in-make
+
 pkg-config (home)
 www/Software/pkg-config
 https://www.freedesktop.org/wiki/Software/pkg-config/
