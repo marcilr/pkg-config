@@ -3,6 +3,29 @@ Created Tue Aug 22 08:54:37 AKDT 2017
 Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 
+pkg-config
+
+
+pkg-config is a helper tool used when compiling applications
+and libraries.  It helps you insert the correct compiler options
+on the command line so an application can use gcc -o test test.c
+`pkg-config --libs --cflags glib-2.0` for instance, rather than
+hard-coding values on where to find glib (or other libraries).
+It is language-agnostic, so it can be used for defining the
+location of documentation tools, for instance.
+
+The program is free software and licensed under the GPL version 2
+or any later version (at your option).
+
+pkg-config works on multiple platforms: Linux and other UNIX-like
+operating systems, Mac OS X and Windows.  It does not require 
+anything but a reasonably well working C compiler and a C library,
+but can use an installed glib if that is present. (A copy of recent
+glib2 is shipped together with pkg-config versions since 0.27, and
+this is sufficient for pkg-config to compile and work properly.)
+--www.freedesktop.org/wiki/Software/pkg-config/
+
+
 pkg-config is a computer program that provides a unified
 interface for querying installed libraries for the purpose
 of compiling software from its source code.  It allows
@@ -65,6 +88,10 @@ $ md5sum /usr/bin/pkg-config
 
 Links
 =====
+pkg-config (home)                            
+www/Software/pkg-config
+https://www.freedesktop.org/wiki/Software/pkg-config/
+
 pkg-config
 From Wikipedia, the free encyclopedia
 https://en.wikipedia.org/wiki/Pkg-config
