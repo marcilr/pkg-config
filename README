@@ -5,6 +5,9 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+links.txt
+  pkg-config related links
+
 pkg-config.txt
   pkgconf is a program which helps to configure compiler and linker flags
   for development frameworks. This allows build systems to detect other
