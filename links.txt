@@ -1,0 +1,18 @@
+links.txt
+Created Tue Aug 22 08:57:51 AKDT 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+pkg-config related links
+
+
+Links
+=====
+How to build software outside Homebrew
+with Homebrew keg-only dependencies.
+Some good pkg-config and CFLAGS info here
+https://github.com/Homebrew/legacy-homebrew/blob/683b9b63a2c09dcc49f2de0742c9c904b7ccbc8d/share/doc/homebrew/How-to-build-software-outside-Homebrew-with-Homebrew-keg-only-dependencies.md
+
+pkg-config
+From Wikipedia, the free encyclopedia
+https://en.wikipedia.org/wiki/Pkg-config
