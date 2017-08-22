@@ -3,13 +3,55 @@ Created Tue Aug 22 08:54:37 AKDT 2017
 Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 
-pkg-config
+pkg-config is a computer program that provides a unified
+interface for querying installed libraries for the purpose
+of compiling software from its source code.  It allows
+programmers and installation scripts to work without
+explicit knowledge of detailed library path information.
+pkg-config was originally designed for Linux, but it is
+now also available for the various BSDs, Microsoft
+Windows, Mac OS X, and Solaris.
 
+It outputs various information about installed libraries.
+This information may include:
 
-pkgconf is a program which helps to configure compiler and linker flags
-for development frameworks. This allows build systems to detect other
-dependencies and use them with the system toolchain.
---man pkg-config
+o Parameters for C or C++ compiler
+o Parameters for linker
+o Version of the package in question
+
+The first implementation was written in shell.
+Later, it was rewritten in C using the GLib library.
+
+Synopsis
+========
+When a library is installed (automatically through the
+use of an RPM, deb, or other binary packaging system
+or by compiling from the source), a .pc file should be
+included and placed into a directory with other .pc
+files (the exact directory is dependent upon your
+system and outlined in the pkg-config man page).  This
+file has several entries.
+
+These entries typically contain a list of dependent
+libraries that programs using the package also need
+to compile. Entries also typically include the location
+of header files, version information and a description.
+
+Here is an example .pc file for libpng:
+
+    prefix=/usr/local
+    exec_prefix=${prefix}
+    libdir=${exec_prefix}/lib
+    includedir=${exec_prefix}/include
+ 
+    Name: libpng
+    Description: Loads and saves PNG files
+    Version: 1.2.8
+    Libs: -L${libdir} -lpng12 -lz
+    Cflags: -I${includedir}/libpng12
+
+--wikipedia
+
 
 
 NOTE: pkgconf and pkg-config resolve to the same application
@@ -20,3 +62,9 @@ $ md5sum /usr/bin/pkgconf
 
 $ md5sum /usr/bin/pkg-config
 8784f7bbe13a1330d3a80950b5468823  /usr/bin/pkg-config
+
+Links
+=====
+pkg-config
+From Wikipedia, the free encyclopedia
+https://en.wikipedia.org/wiki/Pkg-config
