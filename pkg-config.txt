@@ -1,0 +1,22 @@
+pkg-config.txt
+Created Tue Aug 22 08:54:37 AKDT 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+pkg-config
+
+
+pkgconf is a program which helps to configure compiler and linker flags
+for development frameworks. This allows build systems to detect other
+dependencies and use them with the system toolchain.
+--man pkg-config
+
+
+NOTE: pkgconf and pkg-config resolve to the same application
+      on Debian jessie 8.9 amd64:
+
+$ md5sum /usr/bin/pkgconf
+8784f7bbe13a1330d3a80950b5468823  /usr/bin/pkgconf
+
+$ md5sum /usr/bin/pkg-config
+8784f7bbe13a1330d3a80950b5468823  /usr/bin/pkg-config
